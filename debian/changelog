@@ -1,3 +1,9 @@
+console-setup (1.108ubuntu15.4bb1) xenial; urgency=medium
+
+  * Balabit patched version
+
+ -- Balabit Platform Team <devnull@dev.null>  Sun, 17 Jun 2018 04:22:30 +0200
+
 console-setup (1.108ubuntu15.4) xenial; urgency=medium
 
    * Drop dependency from console-setup to initramfs-tools |
