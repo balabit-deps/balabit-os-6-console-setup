@@ -56,11 +56,8 @@ tempfile () {
     local tmp
     tmp="$TMPFILE"
     if \
-        TMPFILE=`mktemp /tmp/tmpkbd.XXXXXX 2>/dev/null` \
-            || TMPFILE=`mktemp /run/tmpkbd.XXXXXX 2>/dev/null` \
-            || TMPFILE=`mktemp /dev/.tmpkbd.XXXXXX 2>/dev/null` \
-            || TMPFILE=`mktemp /lib/init/rw/tmpkbd.XXXXXX 2>/dev/null` \
-            || TMPFILE=`mktemp 2>/dev/null`
+        TMPFILE=`mktemp /run/tmpkbd.XXXXXX 2>/dev/null` \
+            || TMPFILE=`mktemp /tmp/tmpkbd.XXXXXX 2>/dev/null`
     then
         if [ -z "$tmp" ]; then
             trap 'rm -f "$TMPFILE" >/dev/null 2>&1' 0
